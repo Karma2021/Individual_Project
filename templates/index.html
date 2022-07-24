@@ -1,0 +1,482 @@
+{%  extends 'userbase.html' %}
+
+{% load static %}
+{% block title %}
+<title>Home</title>
+
+{% endblock title %}
+{% block content %}
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <div class="header-1">
+
+            <a href="#" class="logo"> <i class="fas fa-book"></i> MangaMania </a>
+
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="/user/login"><div id="login-btn" class="fas fa-user"></div></a>
+            </div>
+
+        </div>
+
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="index.html">home</a>
+                <a href="/product/">featured</a>
+                <a href="contact.html">Contact Us</a>
+                <!-- <a href="#reviews">reviews</a> -->
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- bottom navbar  -->
+
+    <nav class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#featured" class="fas fa-list"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#reviews" class="fas fa-comments"></a>
+        <a href="#blogs" class="fas fa-blog"></a>
+    </nav>
+
+    
+
+    <!-- home section starts  -->
+    
+
+    <section class="home bg-dark" id="home">
+
+        <div class="row">
+
+            <div class="content">
+                <h3>Manga Mania</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt nostrum accusamus. Nam alias
+                    sit necessitatibus, aliquid ex minima at!</p>
+                <a href="#" class="btn">Buy now</a>
+            </div>
+
+            <div class="swiper books-slider">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide"><img src="{% static 'images/onepiece.jpg' %}" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="" alt=""></a>
+                    <a href="#" class="swiper-slide"><img src="" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- home section end here  -->
+    <!-- featured section starts  -->
+
+    <section class="featured" id="featured">
+
+        <h1 class="heading"> <span>Popular Manga</span> </h1>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box ">
+                    <div class="image">
+                        <img src="image/naruto.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Naruto: Shippuden</h3>
+                        <div class="price">$15.99 </div>
+                        <a href="index.html" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/blackclover.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Black Clover</h3>
+                        <div class="price">$15.99</div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/onepiece.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>One Piece</h3>
+                        <div class="price">$15.99</div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/onepunchman.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>One Punchman</h3>
+                        <div class="price">$15.99</div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/bleach.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>bleach</h3>
+                        <div class="price">$15.99</div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/haikyu.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Haikyuu</h3>
+                        <div class="price">$15.99</div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/tokyog.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Tokyo Ghoul</h3>
+                        <div class="price">$15.99</div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="image/berserk.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Berserk</h3>
+                        <div class="price">$15.99</div>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+                </div>
+
+    
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+    <!-- featured section ends -->
+
+
+    <!-- arrivals section starts  -->
+
+    <section class="arrivals" id="arrivals">
+
+        <h1 class="heading"> <span>new arrivals</span> </h1>
+
+        <div class="swiper arrivals-slider">
+
+            <div class="swiper-wrapper">
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.99</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.99</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.99</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+
+            </div>
+
+        </div>
+
+        <div class="swiper arrivals-slider">
+
+            <div class="swiper-wrapper">
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.99</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.99</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="swiper-slide box">
+                    <div class="image">
+                        <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>new arrivals</h3>
+                        <div class="price">$15.99</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </a>
+
+            
+
+            </div>
+
+        </div>
+
+    </section>
+    
+
+    <!-- arrivals section ends -->
+
+
+    <!-- reviews section starts  -->
+
+    <section class="reviews" id="reviews">
+
+        <h1 class="heading"> <span>Customer reviews</span> </h1>
+
+        <div class="swiper reviews-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    <h3>Naruto Uzumaki</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam
+                        at sint, eos ex similique facere hic.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    <h3>Hatake Kakashi</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam
+                        at sint, eos ex similique facere hic.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    <h3>Itadori Yuji</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam
+                        at sint, eos ex similique facere hic.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="https://picfiles.alphacoders.com/385/thumb-385831.jpg" alt="">
+                    <h3>Uchiha Sasuke</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur nihil ipsa placeat. Aperiam
+                        at sint, eos ex similique facere hic.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- reviews section ends -->
+
+
+    
+
+
+    <!-- footer section starts  -->
+
+    <footer class="new_footer_area">
+        <div class="new_footer_top" id="footer">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18 text-light">Useful Link</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">Know Us</a></li>
+                                <li><a href="#">Featured</a></li>
+                                
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">My tasks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s"
+                            style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18 text-light">Contact</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href=""><i class="fas fa-home mr-3"></i> Boudha, Kathmandu, Nepal</p></a></li>
+                                <li><a href=""><i class="fas fa-envelope mr-3"></i> karma@gmail.com</p></a></li>
+                                <li><a href=""><i class="fas fa-phone mr-3"></i> + 977-9818356361</p></a></li>
+                                <li><a href=""><i class="fas fa-print mr-3"></i> + 977-9818356361</p></a></li>                              
+                            </ul>
+                        </div>
+                    </div>
+        
+        
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s"
+                            style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Follow us</h3>
+                            <div class="f_social_icon">
+                                <a href="#" class="fab fa-facebook"></a>
+                                <a href="#" class="fab fa-twitter"></a>
+                                <a href="#" class="fab fa-linkedin"></a>
+                                <a href="#" class="fab fa-instagram"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6"> 
+                        <div class="container-fluid">   
+                            <div class="map-responsive">
+                            <h3 class="f-title f_600 t_color f_size_18 text-light">reach us</h3>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14129.422170685213!2d85.3300767!3d27.7063067!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c9602e69b406e27!2sSoftwarica%20College%20-%20Block%20E!5e0!3m2!1sen!2snp!4v1658206262382!5m2!1sen!2snp"
+                                    width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+        </div>
+
+    </footer>
+
+    <!-- footer section ends -->
+
+    {% endblock content %}
+
+
+    
