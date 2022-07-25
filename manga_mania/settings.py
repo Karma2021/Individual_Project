@@ -40,8 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
     'product.apps.ProductConfig',
+    'orders.apps.OrdersConfig', 
+    'cart',
     'user.apps.UserConfig'
 ]
+
+CART_SESSION_ID = 'cart'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,6 +59,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'manga_mania.urls'
 
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -62,6 +68,9 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'cart.context_processor.tax',
+                'cart.context_processor.totalwithtax',
+                'cart.context_processor.cart_total_amount',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
