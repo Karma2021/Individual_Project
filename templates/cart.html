@@ -1,0 +1,143 @@
+
+{%  extends 'userbase.html' %}
+
+
+{% block title %}
+<title>Cart</title>
+
+{% endblock title %}
+
+{% block css %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+{% endblock css %}
+
+{% load cart_tag %}
+{% load static %}
+{% block content %}
+
+
+{%  include 'nav.html' %}
+
+
+
+
+
+
+
+
+<div class="px-4 px-lg-0">
+    <!-- For demo purpose -->
+    <div class="container text-white py-5 text-center">
+      <h1 class="display-4">shopping cart</h1>
+      <p class="lead mb-0">Build a fully structred shopping cart page </p>
+      <!-- <p class="lead">Snippet by <a href="https://bootstrapious.com/snippets" class="text-white font-italic">
+              <u>Bootstrapious</u></a>
+      </p> -->
+    </div>
+    <!-- End -->
+  
+    <div class="pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+  
+            <!-- Shopping cart table -->
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="p-2 px-3 text-uppercase">Product</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2 text-uppercase">Price</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2 text-uppercase">Quantity</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2 text-uppercase">Remove</div>
+                    </th>
+                  </tr>
+                </thead>
+                {% for key,value in request.session.cart.items %}
+                <tbody>
+                  <tr>
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <img src="{{value.image}}" alt="" width="70" class="img-fluid rounded shadow-sm">
+                        <div class="ml-3 d-inline-block align-middle">
+                          <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Name : {{value.name}}</a></h5><span class="text-muted font-weight-normal font-italic d-block"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><strong>${{value.price}}</strong></td>
+                    <td class="border-0 align-middle"><strong>{{value.quantity}}</strong></td>
+                    <td class="border-0 align-middle"><a href="{% url 'item_clear' value.product_id %}" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                  </tr>           
+                </tbody>
+                {% endfor %}
+              </table>
+            </div>
+            <!-- End -->
+          </div>
+        </div>
+  
+        <div class="row py-5 p-4 bg-white rounded shadow-sm">
+          <div class="col-lg-6">
+            <form action="/product/checkout/" method="POST">
+                {% csrf_token %}
+                <div class="payment-info">
+                    <!-- <div class="d-flex justify-content-between align-items-center"><span>Card details</span></div><span class="type d-block mt-3 mb-1">Card type</span><label class="radio"> <input type="radio" name="card" value="payment" checked> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png"/></span> </label> -->
+
+                    <div class="cc-selector col-lg-2 ">
+                        <input  id="esewa" type="radio" name="payment" value="esewa" />
+                        <label class="drinkcard-cc esewa" for="esewa"></label>
+                        <input id="khalti" type="radio" name="payment" value="mastercard" />
+                        <label class="drinkcard-cc khalti"for="khalti"></label>
+                    </div>
+
+                    <div><label class="credit-card-label">Name on card</label><input type="text" class="form-control credit-inputs" placeholder="Name" name="phonenumber"></div>
+                    <div><label class="credit-card-label">Card number</label><input type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000" name="email"></div>
+                    <div class="row">
+                        <div class="col-md-6"><label class="credit-card-label">Date</label><input type="text" class="form-control credit-inputs" placeholder="12/24" name="address"></div>
+                        <div class="col-md-6"><label class="credit-card-label">CVV</label><input type="text" class="form-control credit-inputs" placeholder="342" name="pincode"></div>
+                    </div>
+                </div>
+            </div>
+          
+
+          <div class="col-lg-6">
+            <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+            <div class="p-4">
+              <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
+              <ul class="list-unstyled mb-4">
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>${{cart_total_amount}}</strong></li>
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>${{tax}}</strong></li>
+                <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total(With tax): </strong>
+                  <h5 class="font-weight-bold">${{totalwithtax}}</h5>
+                </li>
+                <button class="btn-block btn-blue">
+                    <span>
+                        <span id="checkout">Checkout</span>
+                        <span id="check-amt">${{totalwithtax}}</span>
+                    </span>
+                </button>
+            </div>
+          </div>
+        </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+
+
+  {%  include 'footer.html' %}
+
+
+
+
+{% endblock content %}
