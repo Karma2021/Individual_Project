@@ -1,1 +1,101 @@
-about
+
+
+
+
+{%  extends 'userbase.html' %}
+
+{% load static %}
+{% block title %}
+<title>Books</title>
+
+{% endblock title %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+
+
+
+{% endblock css %}
+
+{% block content %}
+
+
+
+
+
+
+{%  include 'nav.html' %}
+
+
+
+
+
+
+
+
+<!-- Page Content -->
+<div class="page-heading about-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="text-content">
+            <h4>about us</h4>
+            <h2>our company</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="best-features about-features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Our Background</h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="right-image">
+            <img src="image/a.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="left-content">
+            <h4>Who we are &amp; What we do?</h4>
+            <p>Corrupt politicians, frenzied nationalists, and other warmongering forces constantly jeopardize the thin veneer of peace between neighboring countries Ostania and Westalis. In spite of their plots, renowned spy and master of disguise "Twilight" fulfills dangerous missions one after another in the hope that no child will have to experience the horrors of war.In the bustling Ostanian city of Berlint, Twilight dons the alias of "Loid Forger," an esteemed psychiatrist. However, his true intention is to gather intelligence on prominent politician Donovan Desmond, who only appears rarely in public at his sons' school: the prestigious Eden Academy.</p>
+            
+            <div id="example" style="display: none;">
+                <p>Corrupt politicians, frenzied nationalists, and other warmongering forces constantly jeopardize the thin veneer of peace between neighboring countries Ostania and Westalis. In spite of their plots, renowned spy and master of disguise "Twilight" fulfills dangerous missions one after another in the hope that no child will have to experience the horrors of war.In the bustling Ostanian city of Berlint, Twilight dons the alias of "Loid Forger," an esteemed psychiatrist. However, his true intention is to gather intelligence on prominent politician Donovan Desmond, who only appears rarely in public at his sons' school: the prestigious Eden Academy</p>
+            </div>
+            <button>Show</button>
+            <!-- <a class="read" href="">read more</a>
+            <br>
+            <br>
+            <br> -->
+            <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  {%  include 'footer.html' %}
+
+
+  
+{% endblock content %}
