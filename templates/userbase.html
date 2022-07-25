@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html >
 <head>
     {% block title %}
 
@@ -16,11 +16,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  
     <link href="https://api.fontshare.com/v2/css?f[]=melodrama@400,500&f[]=satoshi@300&f[]=general-sans@300,400&display=swap"rel="stylesheet">
 
 
-
+    <script src="//cdn.shopify.com/s/files/1/0659/4529/t/75/assets/swiper.min.js?10728068994914913511">
+    </script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   	<link rel="stylesheet" type="text/css" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<!--  end linking css,js and fonts -->
@@ -59,10 +61,11 @@
 
 
 
+    {% block js %}
 
+    {% endblock js %}
 
     
-    <script src="{% static 'js/main.js' %}"></script>
   
     </body>
 </html>
